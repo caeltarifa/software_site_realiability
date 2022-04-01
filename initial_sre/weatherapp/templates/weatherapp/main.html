@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>This is the films MAIN page.</h1>
+<h3>Link to the website pages:</h3>
+<ul>
+  <li><a href="{% url 'home_weatherapp' %}">Home Page</a></li>
+  <li><a href="{% url 'weatherapp:main' %}">Films Main Page</a></li>
+  <li><a href="{% url 'weatherapp:user_info' %}">Films User_Info Page</a></li>
+</ul>
+
+{% endblock content %}
