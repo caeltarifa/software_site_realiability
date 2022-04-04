@@ -1,12 +1,16 @@
+from importlib.metadata import requires
 from django.shortcuts import render
 from django.http import HttpResponse
 
 from .web_services import get_region
+
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 
 
-
+@login_required
 def home_weatherapp(request):
     params={}
     context = {
@@ -14,11 +18,11 @@ def home_weatherapp(request):
     }
     return render(request, 'home.html', context)
 
-
+@login_required
 def main(request):
     return render(request, 'weatherapp/main.html', {'title':'SOUTH AMERICA'})
 
-
+@login_required
 def user_info(request):
     return render(request, 'weatherapp/user_info.html', {'title':'SANTIAGO CHILI'})
 

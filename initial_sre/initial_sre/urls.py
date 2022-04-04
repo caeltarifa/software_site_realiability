@@ -25,4 +25,6 @@ urlpatterns = [
     #path('metrics/', include('django_prometheus.urls')),   # added
     url('', include('django_prometheus.urls')),
 
+    path('accounts/', include('django.contrib.auth.urls')),
+
 ]

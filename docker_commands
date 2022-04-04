@@ -1,0 +1,11 @@
+$ docker-compose  -f docker-compose.monitoring.yml ps
+
+$ docker-compose  -f docker-compose.monitoring.yml up -d
+
+$ docker-compose  -f docker-compose.monitoring.yml down
+
+$ docker inspect b0727005d371
+
+$ docker build . -t django-dev-docker
+
+$ winpty docker run -p 8001:8000 -it --rm django-dev-docker

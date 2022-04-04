@@ -14,29 +14,33 @@
         <title>{{title}}</title>
     {% else %}
     <!-- USE DEFAULT TITLE TEXT IF NO VARIABLE "title" IS PASSED BY THE VIEW -->
-        <title>My Films App</title>
+        <title> PYTHON APP  </title>
     {% endif %}
     
   </head>
   <body>
-    <!-- BOOTSTRAP NAVBAR CODE -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="d-flex justify-content-between px-5 mx-auto" style="width: 90%;">
-            <span class="navbar-text text-white">FIRST DJANGO APP</span>
-                <li class="nav-item active">
-                    <a class="nav-link active" href="{% url 'home_weatherapp' %}">Home</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link active" href="{% url 'weatherapp:main' %}">Films</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link active" href="{% url 'weatherapp:user_info' %}">UserInfo</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- END OF NAVBAR CODE-->
-
+      {% if user.is_authenticated %}
+        <!-- BOOTSTRAP NAVBAR CODE -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="d-flex justify-content-between px-5 mx-auto" style="width: 90%;">
+                <span class="navbar-text text-white">FIRST DJANGO APP</span>
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="{% url 'home_weatherapp' %}">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="{% url 'weatherapp:main' %}">Films</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="{% url 'weatherapp:user_info' %}">UserInfo</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- END OF NAVBAR CODE-->
+      {% endif %}
 
     <div class="container-fluid mt-5" style="max-width: 80%">    
     <!-- INSERT THE CONTENT FROM SPECIFIC PAGES HERE-->
