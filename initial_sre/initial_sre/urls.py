@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url
 from weatherapp import views
 
 urlpatterns = [
     path('', views.home_weatherapp, name='home_weatherapp'),
     path('admin/', admin.site.urls),
     path('weatherapp/', include('weatherapp.urls')),   # added
+    #path('metrics/', include('django_prometheus.urls')),   # added
+    url('', include('django_prometheus.urls')),
+
 ]
