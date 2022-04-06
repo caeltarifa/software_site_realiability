@@ -31,6 +31,8 @@
     │       └───__pycache__
     └───monitoring
     │   └───prometheus
+    │   └───docker-compose.monitoring.yml
+    │   └───prometheus.yml
     └───bash_initial.sh
     └───docker_commands
         
