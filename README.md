@@ -19,7 +19,8 @@
 - - - -
 
 ### 1.3 Dashboard visualization
-
+![alt text](https://github.com/caeltarifa/software_site_realiability/blob/main/grafana_dashboard.png)
+- - - -
 ## 2 File structure of the project
 
     ├───initial_sre
