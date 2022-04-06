@@ -100,6 +100,7 @@ The second command show you the status of the services after lunch the container
 - [Prometheus + Grafana in Django](https://karanchuri.medium.com/prometheus-grafana-in-django-92da4d782f8a "Prometheus + Grafana in Django")
 - [[video] Grafana Dashboard📊: Monitor CPU, Memory, Disk and Network Traffic Using Prometheus and Node Exporter](https://www.youtube.com/watch?v=YUabB_7H710 "[video] Grafana Dashboard📊: Monitor CPU, Memory, Disk and Network Traffic Using Prometheus and Node Exporter")
 - [Promql](https://medium.com/@knoldus/introduction-to-promql-46260307fd83 "Promql")
+- [The Top 25 Grafana Dashboards & Visualisations](https://logit.io/blog/post/the-top-21-grafana-dashboards-and-visualisations "Promql")
 
 ### 7.5 AWS
 - [Cost manager AWS](https://us-east-1.console.aws.amazon.com/cost-management/home?region=us-east-1&skipRegion=true#/startupError?code=_CE_Not_Ready_&title=_CE_Not_Ready_Title_ "Cost manager AWS")
