@@ -17,20 +17,18 @@
     ├───initial_sre
     │   ├───initial_sre
     │   │   └───__pycache__
-    │   │   └───templates
-    │   │   └───weatherapp
-    │   │   └───Dockerfile
-    │   │   └───db.sqlite3
-    │   │   └───manage.py
-    │   │   └───requirements.txt
     │   ├───templates
     │   │   └───registration
     │   └───weatherapp
-    │       ├───migrations
-    │       │   └───__pycache__
-    │       ├───templates
-    │       │   └───weatherapp
-    │       └───__pycache__
+    │   |   ├───migrations
+    │   |   │   └───__pycache__
+    │   |   ├───templates
+    │   |   │   └───weatherapp
+    │   |   └───__pycache__
+    │   └───Dockerfile
+    │   └───db.sqlite3
+    │   └───manage.py
+    │   └───requirements.txt
     └───monitoring
     │   └───prometheus
     │   └───docker-compose.monitoring.yml
@@ -53,8 +51,24 @@ api rest, containerized, monitoring, building, deploying and data visualization 
 ## 6 How installing and running?
 
 ### 6.1 Mounting the application docker container
+Open this project in a terminal. You would open "initial_sre" and then introduce the following commands:
+
+        $ docker build . -t django-dev 
+        $ docker run -p 8001:8000 -it --rm django-dev
+        ( $ winpty docker run -p 8001:8000 -it --rm django-dev  (only if you are in windows) )
+
+That is enough and you will have the container running with the application running.
 
 ### 6.2 Mounting the monitoring and dashboard visualization services in docker container
+Over the main directory from dis project, open the monitoring directory, and introduce the following commands:
+
+        $ docker-compose  -f docker-compose.monitoring.yml up -d
+        $ docker-compose  -f docker-compose.monitoring.yml ps
+
+The firs command will execute the services: Prometheus and Grafana in the ports 9090 and 3060, respectively. For prometheus, in the docker-compose you have a file configuration in .yml to initialize the service interconected with the python application and customize some metrics to get from the app.
+
+The second command show you the status of the services after lunch the container.
+        
 
 ## 7 REFERENCES
 ### 7.1 WEB APPLICATION
