@@ -1,22 +1,41 @@
+from ast import If, Return
 from importlib.metadata import requires
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 
-from .web_services import get_region
+from .web_services import get_cities, get_weather
 
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
 
-
+import json
 @login_required
 def home_weatherapp(request):
+
     params={}
     context = {
-        'title' : get_region(params)
+        'title' : 'CAEL APP PYTHON  ',
+        'cities' : json.dumps([ serialize_city(city) for city in get_cities(params)])
     }
     return render(request, 'home.html', context)
+
+def serialize_city(obj):
+    return {
+        'country': obj.get('country'),
+        'cities': obj.get('cities')
+    }
+
+def weather_api(request):
+    city = str(request.GET.get('city_backend'))
+    if city:
+        city=city.split(' - ')[0]
+    params_weather={'q':city, 'aqi':'yes', 'key':'80708fe0179e49c084b233206223003'}
+    
+    weather = get_weather(params_weather)
+    return JsonResponse(weather, safe=False)
+
 
 @login_required
 def main(request):

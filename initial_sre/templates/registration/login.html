@@ -15,25 +15,57 @@
     {% endif %}
 {% endif %}
 
-<form method="post" action="{% url 'login' %}">
-{% csrf_token %}
 
-<div>
-  <td>{{ form.username.label_tag }}</td>
-  <td>{{ form.username }}</td>
-</div>
-<div>
-  <td>{{ form.password.label_tag }}</td>
-  <td>{{ form.password }}</td>
-</div>
 
-<div>
-  <input type="submit" value="login" />
-  <input type="hidden" name="next" value="{{ next }}" />
-</div>
-</form>
 
-{# Assumes you setup the password_reset view in your URLconf #}
-<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+
+
+
+
+
+
+  <!-- Login Form -->
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="card shadow">
+          <div class="card-title text-center border-bottom">
+            <h2 class="p-3">Login</h2>
+          </div>
+          <div class="card-body">
+            <form method="post" action="{% url 'login' %}">
+              {% csrf_token %}
+              <div class="mb-4">
+                <label for="username" class="form-label">Username/Email</label>
+                <strong>caeladmin</strong> 
+                {% comment %} <input type="text" class="form-control" id="username" /> {% endcomment %}
+                <td>{{ form.username }}</td>
+
+              </div>
+              <div class="mb-4">
+                <label for="password" class="form-label">Password</label>
+                <strong>admincael</strong>
+                {% comment %} <input type="password" class="form-control" id="password" /> {% endcomment %}
+                <td>{{ form.password }}</td>
+
+              </div>
+              <div class="mb-4">
+                <input type="checkbox" class="form-check-input" id="remember" />
+                <label for="remember" class="form-label">Remember Me</label>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn text-dark main-bg">Login</button>
+                {% comment %} <input type="submit" value="login" /> {% endcomment %}
+                <input type="hidden" name="next" value="{{ next }}" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 
 {% endblock %}

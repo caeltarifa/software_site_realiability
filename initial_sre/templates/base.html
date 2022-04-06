@@ -17,24 +17,48 @@
         <title> PYTHON APP  </title>
     {% endif %}
     
+    <script src="https://unpkg.com/vue-simple-search-dropdown@latest/dist/vue-simple-search-dropdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.8/vue.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    
+
+    <style>
+        .dropdown .dropdown-input[data-v-6149e08a] {
+            background: #fff;
+            cursor: pointer;
+            border: 1px solid #e7ecf5;
+            border-radius: 3px;
+            color: #333;
+            display: block;
+            font-size: .8em;
+            padding: 6px;
+            height: 55px; 
+            width: 300px;
+            }
+    </style>
+    
   </head>
-  <body>
+  <body class="main-bg">
       {% if user.is_authenticated %}
         <!-- BOOTSTRAP NAVBAR CODE -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="d-flex justify-content-between px-5 mx-auto" style="width: 90%;">
-                <span class="navbar-text text-white">FIRST DJANGO APP</span>
-                    <li class="nav-item active">
-                        <a class="nav-link active" href="{% url 'home_weatherapp' %}">Home</a>
+                <span class="navbar-text text-white">
+                    <img src="https://i.pinimg.com/originals/89/27/01/892701252dab9ead045f745d999cf9fc.gif" alt="" srcset="" style="width: 70px;height: 70px;">
+                    WEATHER PYTHON APP 
+                </span>
+                    <li class="nav-item active" >
+                        <a class="nav-link active" href="{% url 'home_weatherapp' %}" style="color:white">Home</a>
                     </li>
-                    <li class="nav-item active">
+                    {% comment %} <li class="nav-item active">
                         <a class="nav-link active" href="{% url 'weatherapp:main' %}">Films</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link active" href="{% url 'weatherapp:user_info' %}">UserInfo</a>
-                    </li>
+                    </li> {% endcomment %}
                     <li class="nav-item active">
-                        <a class="nav-link active" href="{% url 'logout' %}">Logout</a>
+                        <a class="nav-link active" href="{% url 'logout' %}" style="color:white">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -49,5 +73,6 @@
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
   </body>
 </html>
