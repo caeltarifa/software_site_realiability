@@ -8,7 +8,15 @@
 ![alt text](https://github.com/caeltarifa/software_site_realiability/blob/main/app_api.png)
 - - - - 
 ![alt text](https://github.com/caeltarifa/software_site_realiability/blob/main/app_api_countries.png)
-### 1.2 Metrics of the webapp
+
+### 1.2 PromQL of the webapp
+
+![alt text](https://github.com/caeltarifa/software_site_realiability/blob/main/many_times_restart_app.png)
+- - - -
+![alt text](https://github.com/caeltarifa/software_site_realiability/blob/main/how_resident_memory_changing.png)
+- - - -
+![alt text](https://github.com/caeltarifa/software_site_realiability/blob/main/how_many_memory_would_be_free.png)
+- - - -
 
 ### 1.3 Dashboard visualization
 
