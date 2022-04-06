@@ -105,11 +105,5 @@ The second command show you the status of the services after lunch the container
 ### 7.5 AWS
 - [Cost manager AWS](https://us-east-1.console.aws.amazon.com/cost-management/home?region=us-east-1&skipRegion=true#/startupError?code=_CE_Not_Ready_&title=_CE_Not_Ready_Title_ "Cost manager AWS")
 
-
-
-
-
-
-
-
+- [Cree una canalización de CI / CD en AWS con las funciones CodeCommit, CodeBuild, CodePipeline y Lambda](https://www.youtube.com/watch?v=C99ps_cWp9Y "Cost manager AWS")
 
