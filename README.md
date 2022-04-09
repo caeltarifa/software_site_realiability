@@ -55,6 +55,7 @@
 
 api rest, containerized, monitoring, building, deploying and data visualization of a web app.
 
+![RELIABILITY ON AWS CI/CD](https://user-images.githubusercontent.com/23003922/162554945-369a9e66-53e0-466d-a116-6bed33c2b44a.png)
 
 
 ## 6 How installing and running?
